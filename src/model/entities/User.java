@@ -1,7 +1,5 @@
 package model.entities;
 
-import model.enums.MealType;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +15,7 @@ public class User {
     private Integer age;
     private Float height;
     private Character gender;
-
-    private MealType mealType;
+    
 
     private List<User> subscribedUser = new ArrayList<>();
     private List<Meal> meals = new ArrayList<>();
