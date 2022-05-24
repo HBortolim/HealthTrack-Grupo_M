@@ -14,6 +14,9 @@ public class MealTypeDaoJDBC implements MealTypeDao {
 
     private Connection conn;
 
+    public MealTypeDaoJDBC() {
+    }
+
     public MealTypeDaoJDBC(Connection conn) {
         this.conn = conn;
     }
@@ -77,9 +80,9 @@ public class MealTypeDaoJDBC implements MealTypeDao {
         }
     }
 
-    private MealType instantiateMealType(ResultSet rs) throws SQLException {
+    public MealType instantiateMealType(ResultSet rs) throws SQLException {
         MealType mealType = new MealType();
-        mealType.setId(rs.getInt("id_refc"));
+        mealType.setId(rs.getInt("id_tipo_refc"));
         mealType.setdescTipo(rs.getString("nm_refc"));
         return mealType;
     }

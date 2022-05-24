@@ -21,4 +21,7 @@ public class DaoFactory {
     public static MealTypeDaoJDBC createMealTypeDao(){
         return new MealTypeDaoJDBC(DB.getConnection());
     }
+    public static MealDaoJDBC createMealDao(){
+        return new MealDaoJDBC(DB.getConnection());
+    }
 }

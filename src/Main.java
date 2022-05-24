@@ -69,10 +69,20 @@ public class Main {
 //        System.out.println("</--------- Pressão ------------>");
 
         System.out.println("--------- Refeição ------------");
-
+        User user = new User(3,"Clóvis da Silva","123456789","clov1234@gmail.com");
+        MealType mealType = new MealType(null,"Jantar");
         MealTypeDao mealTypeDao = DaoFactory.createMealTypeDao();
-        MealType mealType = new MealType(null,"Almoço");
         mealTypeDao.insert(mealType);
+        MealDao mealDao = DaoFactory.createMealDao();
+        Meal meal = new Meal(null,"Macarrão",new Date(),400,mealType,user);
+        mealDao.insert(meal);
+
+        List<Meal> list;
+        list = mealDao.getAll();
+
+        for (Meal obj : list) {
+            System.out.println(obj);
+        }
 
         System.out.println("</--------- Refeição ------------>");
 

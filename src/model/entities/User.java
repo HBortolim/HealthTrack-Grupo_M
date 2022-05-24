@@ -1,9 +1,10 @@
 package model.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
 
     private Integer id;
     private String name;
@@ -46,6 +47,10 @@ public class User {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -53,9 +58,11 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -72,6 +79,10 @@ public class User {
         return cpf;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -84,12 +95,24 @@ public class User {
         return age;
     }
 
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     public Float getHeight() {
         return height;
     }
 
+    public void setHeight(Float height) {
+        this.height = height;
+    }
+
     public Character getGender() {
         return gender;
+    }
+
+    public void setGender(Character gender) {
+        this.gender = gender;
     }
 
     public List<Weight> getWeights() {
