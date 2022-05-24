@@ -1,9 +1,7 @@
 package model.dao;
 
 import db.DB;
-import model.dao.impl.ActivityDaoJDBC;
-import model.dao.impl.WeightDaoJDBC;
-import model.dao.impl.ActivityTypeDaoJDBC;
+import model.dao.impl.*;
 
 public class DaoFactory {
     public static WeightDaoJDBC createWeightDao(){
@@ -16,5 +14,11 @@ public class DaoFactory {
 
     public static ActivityTypeDaoJDBC createActivityTypeDao(){
         return new ActivityTypeDaoJDBC(DB.getConnection());
+    }
+    public static BloodPressureDaoJDBC createBloodPressureDao(){
+        return new BloodPressureDaoJDBC(DB.getConnection());
+    }
+    public static MealTypeDaoJDBC createMealTypeDao(){
+        return new MealTypeDaoJDBC(DB.getConnection());
     }
 }

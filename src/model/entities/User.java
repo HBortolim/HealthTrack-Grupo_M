@@ -15,7 +15,7 @@ public class User {
     private Integer age;
     private Float height;
     private Character gender;
-    
+
 
     private List<User> subscribedUser = new ArrayList<>();
     private List<Meal> meals = new ArrayList<>();
@@ -136,4 +136,10 @@ public class User {
         weights.remove(weight);
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
